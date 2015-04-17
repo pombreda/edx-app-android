@@ -42,6 +42,7 @@ import org.edx.mobile.util.DateUtil;
 import org.edx.mobile.util.MediaConsentUtils;
 import org.edx.mobile.util.MemoryUtil;
 import org.edx.mobile.util.NetworkUtil;
+import org.edx.mobile.util.ResourceUtil;
 import org.edx.mobile.util.UiUtil;
 import org.edx.mobile.view.adapters.ChapterAdapter;
 import org.edx.mobile.view.custom.ETextView;
@@ -123,8 +124,9 @@ public class CourseChapterListFragment extends CourseDetailBaseFragment implemen
             startDate = DateUtil.formatCourseNotStartedDate(enrollment.getCourse().getStart());
             if (startDate != null) {
                 startDate = "<font color='" + getString(R.color.grey_text_course_not_started) + "'>" + startDate + "</font>";
-                String courseScheduledText = getString(R.string.course_content_available_text);
-                courseScheduledText = String.format(courseScheduledText, startDate);
+                String courseScheduledText  =  ResourceUtil.getFormattedString(R.string.course_content_available_text,
+                        "start_time", startDate).toString();
+
                 courseScheduleTv = (ETextView) view.findViewById(R.id.course_content_available_tv);
                 courseScheduleTv.setText(Html.fromHtml(courseScheduledText));
             }

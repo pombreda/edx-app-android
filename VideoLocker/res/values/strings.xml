@@ -41,7 +41,7 @@
     <!-- Label for facebook login section -->
     <string name="settings_facebook_login">Facebook login</string>
     <!-- Label for facebook login section. Argument is a user name -->
-    <string name="settings_facebook_login_body_logged_in">Currently logged in as %s</string>
+    <string name="settings_facebook_login_body_logged_in">Currently logged in as {username}</string>
     <!-- Label for button allowing user to connect a facebook account -->
     <string name="settings_facebook_login_body_logged_out">Log in with your Facebook account</string>
     <!-- Error shown attempting to connect a facebook accoutn fails -->
@@ -344,7 +344,7 @@
     <!-- Button text to complete an action -->
     <string name="done_text">Done</string>
     <!-- Label indicating unread actions. Argument is a count -->
-    <string name="unread_text">%s Unread</string>
+    <string name="unread_text">{unread_num} Unread</string>
     <!-- Label indicating number of members in a study group Argument is a count -->
     <string name="group_summary_count">Group Members (%1$s)</string>
     <!-- Label indicating a user has no friends in a study group -->
@@ -373,7 +373,7 @@
     <!-- Message on course list -->
     <string name="course_not_listed_text">Don\'t see one of your courses?</string>
     <!-- Message on course page for course that hasn't started -->
-    <string name="course_content_available_text">This course hasn\'t started yet. Come back on %s to see your videos.</string>
+    <string name="course_content_available_text">This course hasn\'t started yet. Come back on {start_time} to see your videos.</string>
     <!-- Button text, allowing user to open the edx website in a web browser -->
     <string name="open_edx_btn_text">Open edx.org in my browser</string>
     <!-- Message shown when linking to the external course list when in app course registration is not enabled -->
@@ -442,11 +442,10 @@
     <!--  Email subject line when user attempts to submit feedback about the app -->
     <string name="email_subject">Customer Feedback</string>
 
-    <!-- Message indicating videos deleted. Argument is number of videos deleted -->
-    <plurals name="deleted_videos">
-        <item quantity="one">%s video deleted</item>
-        <item quantity="other">%s videos deleted</item>
-    </plurals>
+    <!-- Message indicating one video deleted-->
+    <string name="deleted_video">{video_num} video deleted</string>
+    <!-- Message indicating more than one video deleted-->
+    <string name="deleted_videos">{video_num} videos deleted</string>
 
 
     <!-- Notification related -->
